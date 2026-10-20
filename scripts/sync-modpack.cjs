@@ -5,7 +5,7 @@ const { execSync } = require('child_process');
 const root = path.resolve(__dirname, '..');
 const distroDir = path.join(root, 'rede-eclypse-distro');
 const distroModsDir = path.join(distroDir, 'instance', 'mods');
-const launcherDistroDir = path.join(root, 'extracted_launcher', 'source', 'distribution');
+const pcLauncherDistroDir = path.resolve(root, '..', 'rede-eclypse-launcher', 'distribution');
 const cfInstanceMods = 'C:/Users/gusta/curseforge/minecraft/Instances/Dragon mine z server/mods';
 
 console.log('========================================================');
@@ -27,19 +27,22 @@ if (process.argv.includes('--curseforge') && fs.existsSync(cfInstanceMods)) {
 console.log('-> Gerando novo distribution.json com hashes atualizados...');
 execSync(`node "${path.join(distroDir, 'generate-distribution.js')}"`, { stdio: 'inherit' });
 
-// 3. Atualizar a pasta local do launcher (fallback)
-console.log('-> Sincronizando arquivos de fallback local...');
-fs.copyFileSync(
-    path.join(distroDir, 'distribution.json'),
-    path.join(launcherDistroDir, 'distribution.json')
-);
+// 3. Atualizar a pasta local do launcher PC se existir (fallback offline)
+if (fs.existsSync(pcLauncherDistroDir)) {
+    console.log('-> Sincronizando arquivos de fallback local do launcher PC...');
+    fs.mkdirSync(pcLauncherDistroDir, { recursive: true });
+    fs.copyFileSync(
+        path.join(distroDir, 'distribution.json'),
+        path.join(pcLauncherDistroDir, 'distribution.json')
+    );
 
-// Copiar mods para o bundle local
-const mods = fs.readdirSync(distroModsDir).filter(f => f.endsWith('.jar'));
-const launcherModsDir = path.join(launcherDistroDir, 'instance', 'mods');
-fs.mkdirSync(launcherModsDir, { recursive: true });
-for (const m of mods) {
-    fs.copyFileSync(path.join(distroModsDir, m), path.join(launcherModsDir, m));
+    // Copiar mods para o bundle local do PC
+    const mods = fs.readdirSync(distroModsDir).filter(f => f.endsWith('.jar'));
+    const launcherModsDir = path.join(pcLauncherDistroDir, 'instance', 'mods');
+    fs.mkdirSync(launcherModsDir, { recursive: true });
+    for (const m of mods) {
+        fs.copyFileSync(path.join(distroModsDir, m), path.join(launcherModsDir, m));
+    }
 }
 
 // 4. Subir automaticamente para o GitHub
