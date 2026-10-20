@@ -1,0 +1,19 @@
+.tools/
+.test-eclypse/
+installer.jar.log
+**/node_modules/
+Warriors-1.0.4.exe
+warriorslauncher-1.0.4.zip
+extracted_launcher/
+
+# Modpack temporario / de desenvolvimento
+eclypse-modpack/
+
+# Documentos internos
+RESUMO_LAUNCHER_WARRIORS.md
+
+# Scripts locais de inicializacao
+Iniciar-Eclypse.cmd
+Iniciar-Eclypse.ps1
+Iniciar*.cmd
+Iniciar*.ps1

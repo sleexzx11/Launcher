@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rede Eclypse — Servidor de Distribuição</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #07080b;
+            --card: #0f1118;
+            --accent: #8b5cf6;
+            --accent-glow: #a78bfa;
+            --text: #f3f4f6;
+            --muted: #9ca3af;
+            --border: #1f2438;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+            text-align: center;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(139, 92, 246, 0.15);
+            color: var(--accent-glow);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 99px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+        }
+        h1 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #fff, #c4b5fd);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p.subtitle {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+        .info-box {
+            background: #141724;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: left;
+            margin-bottom: 24px;
+            font-size: 13px;
+        }
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .info-row:last-child { border-bottom: none; }
+        .info-label { color: var(--muted); }
+        .info-value { color: var(--text); font-weight: 600; }
+        .status-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #10b981;
+            margin-right: 6px;
+            box-shadow: 0 0 10px #10b981;
+        }
+        .actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+        a.btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+        a.btn:hover {
+            filter: brightness(1.15);
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="badge">API & Distribuição Oficial</div>
+        <h1>REDE ECLYPSE</h1>
+        <p class="subtitle">Servidor de distribuição automática de mods e arquivos para o Launcher oficial.</p>
+
+        <div class="info-box">
+            <div class="info-row">
+                <span class="info-label">Status do Servidor:</span>
+                <span class="info-value"><span class="status-dot"></span>Online</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Minecraft:</span>
+                <span class="info-value">1.20.1 (Forge 47.4.10)</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Java Requerido:</span>
+                <span class="info-value">Java 17 (64-bit)</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">IP do Servidor:</span>
+                <span class="info-value">sp-02.magnohost.com.br:25518</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Manifesto Ativo:</span>
+                <span class="info-value">distribution.json</span>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a class="btn" href="distribution.json" target="_blank">📄 Ver distribution.json</a>
+        </div>
+    </div>
+</body>
+</html>
