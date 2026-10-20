@@ -460,6 +460,17 @@
           }
         },
         {
+          "id": "cosmos.jar",
+          "name": "cosmos.jar",
+          "type": "File",
+          "artifact": {
+            "size": 53463405,
+            "MD5": "32558b7b583c7c428abb25909cb7a490",
+            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/cosmos.jar",
+            "path": "mods/cosmos.jar"
+          }
+        },
+        {
           "id": "curios-forge-5.14.1+1.20.1.jar",
           "name": "curios-forge-5.14.1+1.20.1.jar",
           "type": "File",
