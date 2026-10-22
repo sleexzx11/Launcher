@@ -67,60 +67,42 @@ async function main() {
 
     rl.close();
 
-    // 1. Se houver alterações locais no código do mobile ou se for uma nova versão, commita e envia
+    // 1. Grava version_info.json no repositório mobile e envia as alterações
     if (fs.existsSync(mobileSourceDir)) {
         try {
-            console.log('\n[1/3] Preparando repositório mobile (rede-eclypse-mobile)...');
+            console.log('\n[1/2] Gravando version_info.json no projeto mobile...');
+            const versionInfoFile = path.join(mobileSourceDir, 'version_info.json');
+            fs.writeFileSync(versionInfoFile, JSON.stringify({
+                versionName: newVersionName,
+                changelog: changelog
+            }, null, 2) + '\n', 'utf8');
+
+            console.log('[2/2] Enviando para o GitHub para iniciar a compilação do APK...');
+            execSync('git add -A', { cwd: mobileSourceDir, stdio: 'inherit' });
+            
             const status = execSync('git status --porcelain', { cwd: mobileSourceDir, encoding: 'utf8' }).trim();
             if (status) {
-                console.log('  -> Salvando modificações nos arquivos do aplicativo...');
-                execSync('git add -A', { cwd: mobileSourceDir, stdio: 'inherit' });
                 execSync(`git commit -m "release(mobile): v${newVersionName} - ${changelog}"`, { cwd: mobileSourceDir, stdio: 'inherit' });
             } else {
-                console.log('  -> Criando marco de versão v' + newVersionName + ' para disparar build do APK...');
                 execSync(`git commit --allow-empty -m "release(mobile): v${newVersionName} - ${changelog}"`, { cwd: mobileSourceDir, stdio: 'inherit' });
             }
 
-            console.log('  -> Enviando para o GitHub (origin/main)...');
             execSync('git push origin main', { cwd: mobileSourceDir, stdio: 'inherit' });
-            console.log('  -> Código mobile enviado ao GitHub com sucesso!');
+            console.log('  -> Código enviado ao GitHub com sucesso!');
         } catch (e) {
             console.error('  [ERRO no Git mobile]:', e.message);
         }
     }
 
-    // 2. Atualiza o mobile-update.json no repositório Launcher
-    console.log('\n[2/3] Atualizando mobile-update.json...');
-    currentData.versionCode = newVersionCode;
-    currentData.versionName = newVersionName;
-    currentData.changelog = changelog;
-    currentData.title = `Rede Eclypse Mobile v${newVersionName}`;
-
-    fs.writeFileSync(updateJsonPath, JSON.stringify(currentData, null, 2) + '\n', 'utf8');
-    console.log('  -> mobile-update.json gravado localmente.');
-
-    // 3. Commit e push no repositório Launcher
-    console.log('\n[3/3] Publicando manifesto de atualização no GitHub (Launcher)...');
-    try {
-        execSync('git add rede-eclypse-distro/mobile-update.json', { cwd: launcherDir, stdio: 'inherit' });
-        const launcherStatus = execSync('git status --porcelain', { cwd: launcherDir, encoding: 'utf8' }).trim();
-        if (launcherStatus) {
-            execSync(`git commit -m "feat(mobile): dispara atualizacao v${newVersionName} (code ${newVersionCode})"`, { cwd: launcherDir, stdio: 'inherit' });
-        }
-        execSync('git push origin main', { cwd: launcherDir, stdio: 'inherit' });
-        console.log('  -> Manifesto publicado no GitHub com sucesso!');
-    } catch (e) {
-        console.error('  [ERRO no Git Launcher]:', e.message);
-    }
-
     console.log('\n============================================================');
-    console.log(`  SUCESSO! Atualização v${newVersionName} ativada para os celulares!`);
+    console.log(`  COMPILAÇÃO DA VERSÃO v${newVersionName} INICIADA COM SUCESSO!`);
     console.log('============================================================\n');
-    console.log('O que acontece agora:');
-    console.log('1. Qualquer jogador que abrir o Launcher no celular verá o aviso');
-    console.log('   de atualização com as novidades digitadas.');
-    console.log('2. Ao clicar em "Atualizar", o celular baixa o novo APK sozinho.');
-    console.log('\nAcompanhe o build do novo APK no GitHub Actions:');
+    console.log('🛡️  PROTEÇÃO ATIVA CONTRA ERRO DE ATUALIZAÇÃO:');
+    console.log('• O aviso de atualização nos celulares SÓ será liberado quando');
+    console.log('  o GitHub Actions terminar 100% de compilar e publicar o novo APK.');
+    console.log('• Se algum jogador abrir o app agora durante os 3 minutos de build,');
+    console.log('  ele jogará normalmente sem nenhum erro de download prematuro!\n');
+    console.log('Acompanhe a compilação em tempo real em:');
     console.log('https://github.com/sleexzx11/rede-eclypse-mobile/actions\n');
     console.log('============================================================\n');
 }
