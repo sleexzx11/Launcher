@@ -67,22 +67,25 @@ async function main() {
 
     rl.close();
 
-    // 1. Se houver alterações locais no código do mobile, commita e envia
+    // 1. Se houver alterações locais no código do mobile ou se for uma nova versão, commita e envia
     if (fs.existsSync(mobileSourceDir)) {
         try {
-            console.log('\n[1/3] Verificando código-fonte do Launcher Mobile...');
+            console.log('\n[1/3] Preparando repositório mobile (rede-eclypse-mobile)...');
             const status = execSync('git status --porcelain', { cwd: mobileSourceDir, encoding: 'utf8' }).trim();
             if (status) {
-                console.log('  -> Salvando e enviando modificações do app para o GitHub...');
-                execSync('git add .', { cwd: mobileSourceDir, stdio: 'inherit' });
+                console.log('  -> Salvando modificações nos arquivos do aplicativo...');
+                execSync('git add -A', { cwd: mobileSourceDir, stdio: 'inherit' });
                 execSync(`git commit -m "release(mobile): v${newVersionName} - ${changelog}"`, { cwd: mobileSourceDir, stdio: 'inherit' });
-                execSync('git push origin main', { cwd: mobileSourceDir, stdio: 'inherit' });
-                console.log('  -> Código do aplicativo enviado ao GitHub com sucesso!');
             } else {
-                console.log('  -> Código-fonte mobile já está atualizado no GitHub.');
+                console.log('  -> Criando marco de versão v' + newVersionName + ' para disparar build do APK...');
+                execSync(`git commit --allow-empty -m "release(mobile): v${newVersionName} - ${changelog}"`, { cwd: mobileSourceDir, stdio: 'inherit' });
             }
+
+            console.log('  -> Enviando para o GitHub (origin/main)...');
+            execSync('git push origin main', { cwd: mobileSourceDir, stdio: 'inherit' });
+            console.log('  -> Código mobile enviado ao GitHub com sucesso!');
         } catch (e) {
-            console.log('  [AVISO no Git mobile]: ' + e.message);
+            console.error('  [ERRO no Git mobile]:', e.message);
         }
     }
 
@@ -97,14 +100,17 @@ async function main() {
     console.log('  -> mobile-update.json gravado localmente.');
 
     // 3. Commit e push no repositório Launcher
-    console.log('\n[3/3] Publicando manifesto de atualização no GitHub...');
+    console.log('\n[3/3] Publicando manifesto de atualização no GitHub (Launcher)...');
     try {
         execSync('git add rede-eclypse-distro/mobile-update.json', { cwd: launcherDir, stdio: 'inherit' });
-        execSync(`git commit -m "feat(mobile): dispara atualizacao v${newVersionName} (code ${newVersionCode})"`, { cwd: launcherDir, stdio: 'inherit' });
+        const launcherStatus = execSync('git status --porcelain', { cwd: launcherDir, encoding: 'utf8' }).trim();
+        if (launcherStatus) {
+            execSync(`git commit -m "feat(mobile): dispara atualizacao v${newVersionName} (code ${newVersionCode})"`, { cwd: launcherDir, stdio: 'inherit' });
+        }
         execSync('git push origin main', { cwd: launcherDir, stdio: 'inherit' });
-        console.log('  -> Manifesto publicado com sucesso!');
+        console.log('  -> Manifesto publicado no GitHub com sucesso!');
     } catch (e) {
-        console.log('  [Nota no Git]: ' + e.message);
+        console.error('  [ERRO no Git Launcher]:', e.message);
     }
 
     console.log('\n============================================================');
