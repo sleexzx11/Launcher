@@ -43,7 +43,7 @@ async function main() {
         break;
     }
 
-    const newVersionCode = currentVersionCode + 1;
+    const newVersionCode = Math.max(currentVersionCode + 1, 9934860);
 
     console.log(`\nCódigo de versão que forçará a atualização nos celulares: ${newVersionCode}`);
 
