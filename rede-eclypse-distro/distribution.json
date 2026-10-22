@@ -1,6 +1,11 @@
 {
   "version": "1.0.0",
   "rss": null,
+  "discord": {
+    "clientId": "1562658013888778290",
+    "smallImageKey": "logo",
+    "smallImageText": "Rede Eclypse"
+  },
   "servers": [
     {
       "id": "rede-eclypse-1.20.1",
@@ -12,6 +17,11 @@
       "minecraftVersion": "1.20.1",
       "mainServer": true,
       "autoconnect": true,
+      "discord": {
+        "shortId": "Dragon Mine Z",
+        "largeImageKey": "logo",
+        "largeImageText": "Rede Eclypse 1.20.1"
+      },
       "javaOptions": {
         "supported": "17.x",
         "suggestedMajor": 17
