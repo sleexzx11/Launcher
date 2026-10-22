@@ -448,17 +448,6 @@
           ]
         },
         {
-          "id": "Clumps-forge-1.20.1-12.0.0.4.jar",
-          "name": "Clumps-forge-1.20.1-12.0.0.4.jar",
-          "type": "File",
-          "artifact": {
-            "size": 20300,
-            "MD5": "7a71806a1167d866608fc2e8c7d62041",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/Clumps-forge-1.20.1-12.0.0.4.jar",
-            "path": "mods/Clumps-forge-1.20.1-12.0.0.4.jar"
-          }
-        },
-        {
           "id": "CustomNPCs-1.20.1-GBPort-Unofficial-1.20.1.20260711.jar",
           "name": "CustomNPCs-1.20.1-GBPort-Unofficial-1.20.1.20260711.jar",
           "type": "File",
@@ -467,28 +456,6 @@
             "MD5": "3875c7b5f671470fb966482fb1d1500a",
             "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/CustomNPCs-1.20.1-GBPort-Unofficial-1.20.1.20260711.jar",
             "path": "mods/CustomNPCs-1.20.1-GBPort-Unofficial-1.20.1.20260711.jar"
-          }
-        },
-        {
-          "id": "Fastload-Reforged-mc1.20.1-3.4.0.jar",
-          "name": "Fastload-Reforged-mc1.20.1-3.4.0.jar",
-          "type": "File",
-          "artifact": {
-            "size": 66989,
-            "MD5": "3266e638032dc9b957bf1e7372671c05",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/Fastload-Reforged-mc1.20.1-3.4.0.jar",
-            "path": "mods/Fastload-Reforged-mc1.20.1-3.4.0.jar"
-          }
-        },
-        {
-          "id": "ImmediatelyFast-Forge-1.2.21+1.20.4.jar",
-          "name": "ImmediatelyFast-Forge-1.2.21+1.20.4.jar",
-          "type": "File",
-          "artifact": {
-            "size": 432352,
-            "MD5": "36889096689f9a60549f2da2a2c2327a",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/ImmediatelyFast-Forge-1.2.21+1.20.4.jar",
-            "path": "mods/ImmediatelyFast-Forge-1.2.21+1.20.4.jar"
           }
         },
         {
@@ -503,25 +470,14 @@
           }
         },
         {
-          "id": "canary-mc1.20.1-0.3.3.jar",
-          "name": "canary-mc1.20.1-0.3.3.jar",
-          "type": "File",
-          "artifact": {
-            "size": 594191,
-            "MD5": "1bd8bdb43c190ddc671c5ea0bf3b8cb1",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/canary-mc1.20.1-0.3.3.jar",
-            "path": "mods/canary-mc1.20.1-0.3.3.jar"
-          }
-        },
-        {
-          "id": "cosmos.jar",
-          "name": "cosmos.jar",
+          "id": "cosmos-0.1.jar",
+          "name": "cosmos-0.1.jar",
           "type": "File",
           "artifact": {
             "size": 53463405,
             "MD5": "32558b7b583c7c428abb25909cb7a490",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/cosmos.jar",
-            "path": "mods/cosmos.jar"
+            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/cosmos-0.1.jar",
+            "path": "mods/cosmos-0.1.jar"
           }
         },
         {
@@ -580,61 +536,6 @@
           }
         },
         {
-          "id": "embeddium-0.3.27+mc1.20.1.jar",
-          "name": "embeddium-0.3.27+mc1.20.1.jar",
-          "type": "File",
-          "artifact": {
-            "size": 1315841,
-            "MD5": "b83c22c76ffc90b382d380a8dcf08b83",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/embeddium-0.3.27+mc1.20.1.jar",
-            "path": "mods/embeddium-0.3.27+mc1.20.1.jar"
-          }
-        },
-        {
-          "id": "embeddiumplus-1.20.1-v1.2.13.jar",
-          "name": "embeddiumplus-1.20.1-v1.2.13.jar",
-          "type": "File",
-          "artifact": {
-            "size": 895427,
-            "MD5": "e370f41a09f9d1bfd90e89044230d3a8",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/embeddiumplus-1.20.1-v1.2.13.jar",
-            "path": "mods/embeddiumplus-1.20.1-v1.2.13.jar"
-          }
-        },
-        {
-          "id": "entityculling-forge-1.8.2-mc1.20.1.jar",
-          "name": "entityculling-forge-1.8.2-mc1.20.1.jar",
-          "type": "File",
-          "artifact": {
-            "size": 478568,
-            "MD5": "27a0e6445bca14ddd3bfc7c28a0b2077",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/entityculling-forge-1.8.2-mc1.20.1.jar",
-            "path": "mods/entityculling-forge-1.8.2-mc1.20.1.jar"
-          }
-        },
-        {
-          "id": "ferritecore-6.0.1-forge.jar",
-          "name": "ferritecore-6.0.1-forge.jar",
-          "type": "File",
-          "artifact": {
-            "size": 123034,
-            "MD5": "f52f538207a4829d7060550092ce2383",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/ferritecore-6.0.1-forge.jar",
-            "path": "mods/ferritecore-6.0.1-forge.jar"
-          }
-        },
-        {
-          "id": "fusion-1.1.1-forge-mc1.20.1.jar",
-          "name": "fusion-1.1.1-forge-mc1.20.1.jar",
-          "type": "File",
-          "artifact": {
-            "size": 221813,
-            "MD5": "c8cc6729366722da02ea57fd87d7275c",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/fusion-1.1.1-forge-mc1.20.1.jar",
-            "path": "mods/fusion-1.1.1-forge-mc1.20.1.jar"
-          }
-        },
-        {
           "id": "geckolib-forge-1.20.1-4.8.4.jar",
           "name": "geckolib-forge-1.20.1-4.8.4.jar",
           "type": "File",
@@ -643,72 +544,6 @@
             "MD5": "83c73bcbf5778235569025ed968dc3ec",
             "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/geckolib-forge-1.20.1-4.8.4.jar",
             "path": "mods/geckolib-forge-1.20.1-4.8.4.jar"
-          }
-        },
-        {
-          "id": "memoryleakfix-forge-1.17+-1.1.5.jar",
-          "name": "memoryleakfix-forge-1.17+-1.1.5.jar",
-          "type": "File",
-          "artifact": {
-            "size": 227925,
-            "MD5": "5dd9149414ca375ceab146242c6e84ab",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/memoryleakfix-forge-1.17+-1.1.5.jar",
-            "path": "mods/memoryleakfix-forge-1.17+-1.1.5.jar"
-          }
-        },
-        {
-          "id": "modernfix-forge-5.19.4+mc1.20.1.jar",
-          "name": "modernfix-forge-5.19.4+mc1.20.1.jar",
-          "type": "File",
-          "artifact": {
-            "size": 778504,
-            "MD5": "359e779ab4f91fa48f1b1aab0dfb0821",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/modernfix-forge-5.19.4+mc1.20.1.jar",
-            "path": "mods/modernfix-forge-5.19.4+mc1.20.1.jar"
-          }
-        },
-        {
-          "id": "noisium-forge-2.3.0+mc1.20-1.20.1.jar",
-          "name": "noisium-forge-2.3.0+mc1.20-1.20.1.jar",
-          "type": "File",
-          "artifact": {
-            "size": 218152,
-            "MD5": "3a8e9a24408c991b3fb97685884f2cce",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/noisium-forge-2.3.0+mc1.20-1.20.1.jar",
-            "path": "mods/noisium-forge-2.3.0+mc1.20-1.20.1.jar"
-          }
-        },
-        {
-          "id": "oculus-mc1.20.1-1.8.0.jar",
-          "name": "oculus-mc1.20.1-1.8.0.jar",
-          "type": "File",
-          "artifact": {
-            "size": 2851119,
-            "MD5": "1dd891634ac21591b5a692471f112572",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/oculus-mc1.20.1-1.8.0.jar",
-            "path": "mods/oculus-mc1.20.1-1.8.0.jar"
-          }
-        },
-        {
-          "id": "rubidium-extra-0.5.4.3+mc1.20.1-build.121.jar",
-          "name": "rubidium-extra-0.5.4.3+mc1.20.1-build.121.jar",
-          "type": "File",
-          "artifact": {
-            "size": 544113,
-            "MD5": "f61cc3ea7c32ce7839467caf0ac0f113",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/rubidium-extra-0.5.4.3+mc1.20.1-build.121.jar",
-            "path": "mods/rubidium-extra-0.5.4.3+mc1.20.1-build.121.jar"
-          }
-        },
-        {
-          "id": "starlight-1.1.2+forge.1cda73c.jar",
-          "name": "starlight-1.1.2+forge.1cda73c.jar",
-          "type": "File",
-          "artifact": {
-            "size": 110583,
-            "MD5": "da99a054428fb62342b6767b993c4c8d",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/starlight-1.1.2+forge.1cda73c.jar",
-            "path": "mods/starlight-1.1.2+forge.1cda73c.jar"
           }
         }
       ]
