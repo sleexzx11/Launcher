@@ -191,6 +191,16 @@ forgeModule.subModules.push({
 const modules = [forgeModule];
 
 // 3. Modulos dos Mods (instance/mods)
+// Corrigir automaticamente nomes codificados por navegadores (%2b -> +)
+const rawMods = fs.readdirSync(instanceModsDir);
+for (const f of rawMods) {
+    if (f.includes('%2b') || f.includes('%2B')) {
+        const clean = f.replace(/%2b/gi, '+');
+        fs.renameSync(path.join(instanceModsDir, f), path.join(instanceModsDir, clean));
+        console.log(`  [AUTO-CORRECAO] ${f} -> ${clean}`);
+    }
+}
+
 const modFiles = fs.readdirSync(instanceModsDir).filter(f => f.endsWith('.jar')).sort();
 console.log(`Lendo ${modFiles.length} mods em ${instanceModsDir}...`);
 
@@ -217,6 +227,11 @@ for (const modFile of modFiles) {
 const distro = {
     version: '1.0.0',
     rss: null,
+    discord: {
+        clientId: '1562658013888778290',
+        smallImageKey: 'logo',
+        smallImageText: 'Rede Eclypse'
+    },
     servers: [
         {
             id: 'rede-eclypse-1.20.1',
@@ -228,6 +243,11 @@ const distro = {
             minecraftVersion: '1.20.1',
             mainServer: true,
             autoconnect: true,
+            discord: {
+                shortId: 'Dragon Mine Z',
+                largeImageKey: 'logo',
+                largeImageText: 'Rede Eclypse 1.20.1'
+            },
             javaOptions: {
                 supported: '17.x',
                 suggestedMajor: 17

@@ -17,8 +17,9 @@ if (process.argv.includes('--curseforge') && fs.existsSync(cfInstanceMods)) {
     console.log('-> Sincronizando mods da pasta do CurseForge...');
     const cfFiles = fs.readdirSync(cfInstanceMods).filter(f => f.endsWith('.jar'));
     for (const f of cfFiles) {
+        const cleanName = f.replace(/%2b/gi, '+');
         const src = path.join(cfInstanceMods, f);
-        const dst = path.join(distroModsDir, f);
+        const dst = path.join(distroModsDir, cleanName);
         fs.copyFileSync(src, dst);
     }
 }

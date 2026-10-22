@@ -1,6 +1,11 @@
 {
   "version": "1.0.0",
   "rss": null,
+  "discord": {
+    "clientId": "1562658013888778290",
+    "smallImageKey": "logo",
+    "smallImageText": "Rede Eclypse"
+  },
   "servers": [
     {
       "id": "rede-eclypse-1.20.1",
@@ -12,6 +17,11 @@
       "minecraftVersion": "1.20.1",
       "mainServer": true,
       "autoconnect": true,
+      "discord": {
+        "shortId": "Dragon Mine Z",
+        "largeImageKey": "logo",
+        "largeImageText": "Rede Eclypse 1.20.1"
+      },
       "javaOptions": {
         "supported": "17.x",
         "suggestedMajor": 17
@@ -471,14 +481,14 @@
           }
         },
         {
-          "id": "ImmediatelyFast-Forge-1.2.21%2b1.20.4.jar",
-          "name": "ImmediatelyFast-Forge-1.2.21%2b1.20.4.jar",
+          "id": "ImmediatelyFast-Forge-1.2.21+1.20.4.jar",
+          "name": "ImmediatelyFast-Forge-1.2.21+1.20.4.jar",
           "type": "File",
           "artifact": {
             "size": 432352,
             "MD5": "36889096689f9a60549f2da2a2c2327a",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/ImmediatelyFast-Forge-1.2.21%2b1.20.4.jar",
-            "path": "mods/ImmediatelyFast-Forge-1.2.21%2b1.20.4.jar"
+            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/ImmediatelyFast-Forge-1.2.21+1.20.4.jar",
+            "path": "mods/ImmediatelyFast-Forge-1.2.21+1.20.4.jar"
           }
         },
         {
@@ -647,14 +657,14 @@
           }
         },
         {
-          "id": "modernfix-forge-5.19.4%2bmc1.20.1.jar",
-          "name": "modernfix-forge-5.19.4%2bmc1.20.1.jar",
+          "id": "modernfix-forge-5.19.4+mc1.20.1.jar",
+          "name": "modernfix-forge-5.19.4+mc1.20.1.jar",
           "type": "File",
           "artifact": {
             "size": 778504,
             "MD5": "359e779ab4f91fa48f1b1aab0dfb0821",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/modernfix-forge-5.19.4%2bmc1.20.1.jar",
-            "path": "mods/modernfix-forge-5.19.4%2bmc1.20.1.jar"
+            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/modernfix-forge-5.19.4+mc1.20.1.jar",
+            "path": "mods/modernfix-forge-5.19.4+mc1.20.1.jar"
           }
         },
         {
@@ -680,25 +690,25 @@
           }
         },
         {
-          "id": "rubidium-extra-0.5.4.3%2bmc1.20.1-build.121.jar",
-          "name": "rubidium-extra-0.5.4.3%2bmc1.20.1-build.121.jar",
+          "id": "rubidium-extra-0.5.4.3+mc1.20.1-build.121.jar",
+          "name": "rubidium-extra-0.5.4.3+mc1.20.1-build.121.jar",
           "type": "File",
           "artifact": {
             "size": 544113,
             "MD5": "f61cc3ea7c32ce7839467caf0ac0f113",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/rubidium-extra-0.5.4.3%2bmc1.20.1-build.121.jar",
-            "path": "mods/rubidium-extra-0.5.4.3%2bmc1.20.1-build.121.jar"
+            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/rubidium-extra-0.5.4.3+mc1.20.1-build.121.jar",
+            "path": "mods/rubidium-extra-0.5.4.3+mc1.20.1-build.121.jar"
           }
         },
         {
-          "id": "starlight-1.1.2%2bforge.1cda73c.jar",
-          "name": "starlight-1.1.2%2bforge.1cda73c.jar",
+          "id": "starlight-1.1.2+forge.1cda73c.jar",
+          "name": "starlight-1.1.2+forge.1cda73c.jar",
           "type": "File",
           "artifact": {
             "size": 110583,
             "MD5": "da99a054428fb62342b6767b993c4c8d",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/starlight-1.1.2%2bforge.1cda73c.jar",
-            "path": "mods/starlight-1.1.2%2bforge.1cda73c.jar"
+            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/starlight-1.1.2+forge.1cda73c.jar",
+            "path": "mods/starlight-1.1.2+forge.1cda73c.jar"
           }
         }
       ]
