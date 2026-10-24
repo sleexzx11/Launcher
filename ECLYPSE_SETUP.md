@@ -5,7 +5,7 @@ Abra `Iniciar-Eclypse.cmd` para executar o launcher adaptado. O EXE Warriors-1.0
 ## Jogo
 
 - Minecraft 1.20.1, Forge 47.4.10, Java 17.
-- Servidor: sp-02.magnohost.com.br:25518.
+- Servidor: redeeclypse.srvmc.com.
 - Nove mods da instância fornecida, instalados em uma pasta própria da Eclypse.
 - Endereço e identidade: `extracted_launcher/source/launcher-config.json`.
 - Distribuição: `extracted_launcher/source/distribution/distribution.json`.

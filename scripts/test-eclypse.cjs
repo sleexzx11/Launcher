@@ -65,7 +65,7 @@ async function main() {
         { displayName: 'EclypseTest', uuid: 'a7fe3c359ac243ab9f0d83d74fe813a4', accessToken: '0', type: 'offline' }, '1.0.0')
     const args = builder.constructJVMArguments([], path.join(work, 'natives'))
     assert.ok(args.includes('47.4.10'))
-    assert.ok(args.includes('sp-02.magnohost.com.br:25518'))
+    assert.ok(args.includes('redeeclypse.srvmc.com'))
     assert.ok(!args.some(arg => typeof arg === 'string' && arg.includes('${')))
     const cp = args[args.indexOf('-cp') + 1].split(path.delimiter)
     assert.ok(cp.every(file => fs.existsSync(file)))
