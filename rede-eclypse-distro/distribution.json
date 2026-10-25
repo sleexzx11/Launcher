@@ -459,6 +459,17 @@
           }
         },
         {
+          "id": "ForgePlaceholderAPI-Forge-2.0.5-1.20.1-fixed.jar",
+          "name": "ForgePlaceholderAPI-Forge-2.0.5-1.20.1-fixed.jar",
+          "type": "File",
+          "artifact": {
+            "size": 9934252,
+            "MD5": "f5882d686df8a3829f4337e5f00ea5ef",
+            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/ForgePlaceholderAPI-Forge-2.0.5-1.20.1-fixed.jar",
+            "path": "mods/ForgePlaceholderAPI-Forge-2.0.5-1.20.1-fixed.jar"
+          }
+        },
+        {
           "id": "TerraBlender-forge-1.20.1-3.0.1.10.jar",
           "name": "TerraBlender-forge-1.20.1-3.0.1.10.jar",
           "type": "File",
@@ -503,14 +514,14 @@
           }
         },
         {
-          "id": "dragonminez-2.1.3.jar",
-          "name": "dragonminez-2.1.3.jar",
+          "id": "dragonminez-2.1.3-slim.jar",
+          "name": "dragonminez-2.1.3-slim.jar",
           "type": "File",
           "artifact": {
-            "size": 61828647,
-            "MD5": "bce3a96f2dd2c7d7aebf76e4e8ab3851",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/dragonminez-2.1.3.jar",
-            "path": "mods/dragonminez-2.1.3.jar"
+            "size": 70164280,
+            "MD5": "246d41e5c486e5bcd6b0ab2327c09b68",
+            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/dragonminez-2.1.3-slim.jar",
+            "path": "mods/dragonminez-2.1.3-slim.jar"
           }
         },
         {
@@ -544,6 +555,39 @@
             "MD5": "83c73bcbf5778235569025ed968dc3ec",
             "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/geckolib-forge-1.20.1-4.8.4.jar",
             "path": "mods/geckolib-forge-1.20.1-4.8.4.jar"
+          }
+        },
+        {
+          "id": "vCharge-Mod-1.0.0.jar",
+          "name": "vCharge-Mod-1.0.0.jar",
+          "type": "File",
+          "artifact": {
+            "size": 32445,
+            "MD5": "73d88e6a6129ab2d588eb1724ae95968",
+            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/vCharge-Mod-1.0.0.jar",
+            "path": "mods/vCharge-Mod-1.0.0.jar"
+          }
+        },
+        {
+          "id": "voicechat-forge-1.20.1-2.6.22.jar",
+          "name": "voicechat-forge-1.20.1-2.6.22.jar",
+          "type": "File",
+          "artifact": {
+            "size": 4923439,
+            "MD5": "4e513ad55bf64e5ea4716544d51f1fde",
+            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/voicechat-forge-1.20.1-2.6.22.jar",
+            "path": "mods/voicechat-forge-1.20.1-2.6.22.jar"
+          }
+        },
+        {
+          "id": "vtagsnametag-1.0.0.jar",
+          "name": "vtagsnametag-1.0.0.jar",
+          "type": "File",
+          "artifact": {
+            "size": 48528,
+            "MD5": "7e666e1daf05707365aed45f19bdb979",
+            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance/mods/vtagsnametag-1.0.0.jar",
+            "path": "mods/vtagsnametag-1.0.0.jar"
           }
         }
       ]
