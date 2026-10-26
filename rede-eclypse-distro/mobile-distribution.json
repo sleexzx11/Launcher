@@ -569,17 +569,6 @@
           }
         },
         {
-          "id": "dragonminez-2.1.3.jar",
-          "name": "dragonminez-2.1.3.jar",
-          "type": "File",
-          "artifact": {
-            "size": 61828647,
-            "MD5": "bce3a96f2dd2c7d7aebf76e4e8ab3851",
-            "url": "https://raw.githubusercontent.com/sleexzx11/Launcher/main/rede-eclypse-distro/instance-mobile/mods/dragonminez-2.1.3.jar",
-            "path": "mods/dragonminez-2.1.3.jar"
-          }
-        },
-        {
           "id": "eclypsecore-1.8.jar",
           "name": "eclypsecore-1.8.jar",
           "type": "File",
